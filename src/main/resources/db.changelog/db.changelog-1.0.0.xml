@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet  id="1"  author="pinar">
+        <createTable  tableName="tbl_person">
+            <column  name="id"  type="int"  autoIncrement="true">
+                <constraints  primaryKey="true"  nullable="false"/>
+            </column>
+            <column  name="person_name"  type="varchar(50)"/>
+            <column  name="person_surname"  type="varchar(50)">
+                <constraints  nullable="false"/>
+            </column>
+            <column  name="state"  type="char(2)"/>
+        </createTable>
+
+
+    </changeSet>
+
+    <changeSet id="2" author="pinar">
+        <insert tableName="tbl_person">
+            <column name="person_name" value="Emel">  </column>
+            <column name="person_surname" value="Aydın" ></column>
+            <column name="state" value="MG"></column>
+
+        </insert>
+    </changeSet>
+
+
+
+
+
+
+
+
+</databaseChangeLog>
