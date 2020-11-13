@@ -16,7 +16,7 @@
             <column  name="person_surname"  type="varchar(50)">
                 <constraints  nullable="false"/>
             </column>
-            <column  name="state"  type="char(2)"/>
+            <column  name="state"  type="varchar(50)"/>
         </createTable>
 
 
